@@ -1,7 +1,11 @@
 package com.cricket.playerDetails.Model;
 
 import jakarta.persistence.Embeddable;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Embeddable
 public class Batting {
 
@@ -18,38 +22,6 @@ public class Batting {
         this.totalRuns = totalRuns;
         this.ballsFaced = ballsFaced;
         this.strikeRate = strikeRate;
-        this.battingAverage = battingAverage;
-    }
-
-    public Integer getTotalRuns() {
-        return totalRuns;
-    }
-
-    public void setTotalRuns(Integer totalRuns) {
-        this.totalRuns = totalRuns;
-    }
-
-    public Integer getBallsFaced() {
-        return ballsFaced;
-    }
-
-    public void setBallsFaced(Integer ballsFaced) {
-        this.ballsFaced = ballsFaced;
-    }
-
-    public Double getStrikeRate() {
-        return strikeRate;
-    }
-
-    public void setStrikeRate(Double strikeRate) {
-        this.strikeRate = strikeRate;
-    }
-
-    public Double getBattingAverage() {
-        return battingAverage;
-    }
-
-    public void setBattingAverage(Double battingAverage) {
         this.battingAverage = battingAverage;
     }
 

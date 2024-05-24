@@ -1,8 +1,13 @@
 package com.cricket.playerDetails.Model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "cricketPlayer")
 public class Player {
@@ -14,6 +19,7 @@ public class Player {
     private String playerNationality;
     private Integer totalMatches;
     private String teamsPlayed;
+
 
     @Embedded
     @AttributeOverrides({
@@ -43,70 +49,6 @@ public class Player {
         this.totalMatches = totalMatches;
         this.teamsPlayed = teamsPlayed;
         this.batting = batting;
-        this.bowling = bowling;
-    }
-
-    public Integer getPlayerId() {
-        return playerId;
-    }
-
-    public void setPlayerId(Integer playerId) {
-        this.playerId = playerId;
-    }
-
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
-    }
-
-    public Date getPlayerDob() {
-        return playerDob;
-    }
-
-    public void setPlayerDob(Date playerDob) {
-        this.playerDob = playerDob;
-    }
-
-    public String getPlayerNationality() {
-        return playerNationality;
-    }
-
-    public void setPlayerNationality(String playerNationality) {
-        this.playerNationality = playerNationality;
-    }
-
-    public Integer getTotalMatches() {
-        return totalMatches;
-    }
-
-    public void setTotalMatches(Integer totalMatches) {
-        this.totalMatches = totalMatches;
-    }
-
-    public String getTeamsPlayed() {
-        return teamsPlayed;
-    }
-
-    public void setTeamsPlayed(String teamsPlayed) {
-        this.teamsPlayed = teamsPlayed;
-    }
-
-    public Batting getBatting() {
-        return batting;
-    }
-
-    public void setBatting(Batting batting) {
-        this.batting = batting;
-    }
-
-    public Bowling getBowling() {
-        return bowling;
-    }
-
-    public void setBowling(Bowling bowling) {
         this.bowling = bowling;
     }
 
